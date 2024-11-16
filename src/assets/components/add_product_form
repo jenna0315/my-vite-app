@@ -1,0 +1,27 @@
+
+function ParentComponent(){
+    const [products,addProductForm] = useState(products)
+    const updateProductList = (newProduct)=> {
+        newProduct({id,name,price,description})
+    }
+    return (
+        <>
+            <h2>Product List</h2>
+            <h4>
+            <ul>
+                {products.map(product => (
+                    <li key={product.id}>{product.name} - ${product.price}</li>
+))}
+            </ul>
+            </h4>
+            </>)
+
+
+}
+export default ParentComponent;
+
+
+<div>
+                        <h2>New Product Child</h2>
+                        <button onClick={updateProductList}>Update Product List</button>
+                    </div>
