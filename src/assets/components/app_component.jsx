@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-//
+
 const products = [
     {id: 1, 
         name: 'Titos Handmade Vodka', 
@@ -16,9 +16,17 @@ const products = [
         description:'A high-quality Dutch vodka, made from 100% wheat and distilled using traditional copper pot stills for a smooth finish.'}
    ]
 function ProductList(){
-    return(
+    const [products, setProducts] = useState([]);
+
+    const AddProduct = (product) => {
+        setItems([...products, product]);
+    };
+
+    return (
         <>
+        <div>
             <h2>Product List</h2>
+            <button onClick={() => AddItem(4,'Belvedier',40,'test')}>Add Product</button>
             <h4>
                 <ul>
                 {products.map(product => (
@@ -26,9 +34,11 @@ function ProductList(){
                     )
                 }
                 </ul>
+        
             </h4>
-            </>)
-            };
+            </div>
+            </>
+            )};
 
             
 export default ProductList;
