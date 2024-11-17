@@ -15,7 +15,7 @@ function AddProduct() {
             <button onClick={() => AddProduct(4,'Belvedier',40,'test')}>Add Product</button>
             <ul>
                 {products.map((product, index) => (
-                    <li key={product.id}>{product}</li>
+                    <li key={products}>{product}</li>
                 ))}
             </ul>
         </div>
@@ -23,4 +23,4 @@ function AddProduct() {
 }
 
 
-export AddProduct
+export default AddProduct

@@ -26,15 +26,15 @@ function ProductList(){
         <>
         <div>
             <h2>Product List</h2>
-            <button onClick={() => AddItem(4,'Belvedier',40,'test')}>Add Product</button>
+            <button onClick={() => AddProduct(products)}>Add Product</button>
             <h4>
-                <ul>
-                {products.map(product => (
-                    <li key={product.id}>{product.name} - ${product.price}</li>)
+            {products.map(product => (
+                    <ProductList key={product.id}
+                        name= {product.name}
+                        price= {product.price}
+                        description={product.description}/>)
                     )
                 }
-                </ul>
-        
             </h4>
             </div>
             </>
