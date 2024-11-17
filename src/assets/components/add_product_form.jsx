@@ -1,26 +1,23 @@
+import { useState } from 'react';
+import ProductList from './app_component';
 
-import React from "react";
-import ProductList from "./app_component";
+import React, { useState } from 'react';
 
-function AddProduct() {
-    const [products, setProducts] = useState([]);
+function ProductForm() {
+    const [id, setProducts] = useState('');
 
-    const AddProduct = (product) => {
-        setProducts([...products, product]);
+    const handleChange = (event) => {
+        setProducts(event.target.id);
     };
 
     return (
         <div>
-            <h2>Product List</h2>
-            <button onClick={() => AddProduct(4,'Belvedier',40,'test')}>Add Product</button>
-            <ul>
-                {products.map((product, index) => (
-                    <li key={products}>{product}</li>
-                ))}
-            </ul>
+            <label>
+                Id:
+                <button type="text" value={id} onClick={handleChange} />
+            </label>
         </div>
     );
 }
 
-
-export default AddProduct
+export default NameForm;
