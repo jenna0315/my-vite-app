@@ -23,12 +23,6 @@ function ProductForm({handleSubmit}) {
         <form onSubmit={submitForm}>
             <h2>Add New Product Below:</h2>
             <label>
-                <h4>
-                Product Id:
-                <input type="number" id="id" name="id" value={id} onChange={(e) => setId(e.target.value)}  />
-                </h4>
-            </label>
-            <label>
             <h4>
                 Product Name:
             <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)}  />
