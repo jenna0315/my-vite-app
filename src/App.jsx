@@ -1,5 +1,6 @@
+import { useState } from "react"
+import ProductList from "./assets/components/app_component"
 
-import ProductList from './assets/components/app_component'
 
 
 function App() {
